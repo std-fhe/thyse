@@ -4,7 +4,6 @@
 
 Thyse emphasizes **immutability, strong typing, and mathematical clarity**. Noise growth, levels, scales, and moduli are modeled directly in the type system, so invalid or unsafe FHE operations can be rejected at compile time.
 
----
 
 ## Language Features
 
@@ -23,7 +22,6 @@ Thyse provides these syntactic and semantic categories:
 * Effects & purity
 * Modules & exports
 
----
 
 ## Example Program
 
@@ -43,7 +41,6 @@ let y = keyswitch(x, Key())
 let z = dec(y)
 ```
 
----
 
 ## Comments & Documentation
 
@@ -64,7 +61,6 @@ let a : CT   # trailing
 def enc(x : Int) : CT
 ```
 
----
 
 ## Imports & Contexts
 
@@ -79,7 +75,6 @@ let b = enc(17)
 let c = a + b    # addition under BGV context
 ```
 
----
 
 ## Variable Declarations
 
@@ -94,7 +89,6 @@ var counter : Int     # mutable
 let u, v, w : BP      # grouped decl
 ```
 
----
 
 ## Function Definitions
 
@@ -111,7 +105,6 @@ def rotate(a : CT, k : Int) : CT
 end
 ```
 
----
 
 ## Function Calls
 
@@ -128,7 +121,6 @@ let c = add(
 )
 ```
 
----
 
 ## Operator Expressions
 
@@ -144,7 +136,6 @@ let p : Bool = true
 let q = not p
 ```
 
----
 
 ## Relational Expressions
 
@@ -159,7 +150,6 @@ a == b
 a != b
 ```
 
----
 
 ## Conditionals
 
@@ -177,7 +167,6 @@ else
 end
 ```
 
----
 
 ## Iteration
 
@@ -192,7 +181,6 @@ let ys = [ f(x) for x in xs if pred(x) ]
 let total = reduce(xs, +, 0)
 ```
 
----
 
 ## Data Structures
 
@@ -213,7 +201,6 @@ let v : Vec[CT, 8]
 let x = v[3]   # bounds-checked, 0-based
 ```
 
----
 
 ## Effects & Purity
 
@@ -225,7 +212,6 @@ def keyswitch(a : BP) : BP[2] !Keyed
 def sample_noise() : Noise !Random
 ```
 
----
 
 ## Modules & Exports
 
@@ -242,7 +228,6 @@ end
 import lwe (enc, dec) using LWE(n=512, q=2^30)
 ```
 
----
 
 ## Compile-time Constants & Constraints
 
@@ -254,7 +239,6 @@ const L = 10
 def rescale(x : CT[L]) : CT[L-1] where L > 0 = ...
 ```
 
----
 
 ## Pipelines & Dataflow
 
@@ -268,7 +252,6 @@ x
   |> mod_switch(q=2^50)
 ```
 
----
 
 ## Ring & Polynomial Literals
 
@@ -279,7 +262,6 @@ ring R = Z_(2^60)[x]/(x^n + 1)
 let p = poly(x^3 + 2*x + 1) in R
 ```
 
----
 
 ## Summary
 
