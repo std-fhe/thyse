@@ -1,6 +1,6 @@
 # Thyse Language
 
-**Thyse** is a domain-specific language (DSL) for describing fully homomorphic encryption (FHE) schemes and computations. It aims to make FHE programs **concise, precise, and expressive**, while exposing mathematical structure to the compiler for optimization, verification, and MLIR code generation.
+**Thyse** (pronounced /ˈtɪsə/ or TI-sa) is a domain-specific language (DSL) for describing fully homomorphic encryption (FHE) schemes and computations. It aims to make FHE programs **concise, precise, and expressive**, while exposing mathematical structure to the compiler for optimization, verification, and MLIR code generation.
 
 Thyse emphasizes **immutability, strong typing, and mathematical clarity**. Noise growth, levels, scales, and moduli are modeled directly in the type system, so invalid or unsafe FHE operations can be rejected at compile time.
 
